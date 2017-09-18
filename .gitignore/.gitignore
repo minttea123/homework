@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+#include <cstring>
+#include <stdio.h>
+
+
+
+
+#define size = 10
+
+using namespace std;
+
+int main() 
+{
+	srand((unsigned)time(NULL));
+
+
+	int r =	(rand() % 9) + 1;
+cout << r;
+	
+	return 0;
+}
