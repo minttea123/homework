@@ -1,0 +1,49 @@
+// homework for CSCI110
+// ConsoleApplication18.cpp : Defines the entry point for the console application.
+//Created a program that checks to make sure youre over 18 and then allows you to vote
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int age, years, election, votes, d, r;
+
+int main()
+{
+	for (election = 1; election <= 2; election++)
+	{
+		cout << "Please enter your age:" << endl;
+		cin >> age;
+		years = 18 - age;
+		do {
+			if (age <18) {
+				cout << "You are not eligible to vote! Please wait " << years << " years" << endl;
+
+			}
+			else if (age >= 18)
+			{
+				cout << "Please enter your vote" << endl;
+				cout << "1: Hillary Clinton" << endl << "2: Donald Trump" << endl;
+				cin >> votes;
+				
+				if (votes = 1)
+				{
+					d++;
+				}
+				else if (votes = 2) {
+					r++;
+				}
+				cout << election << endl;
+			}
+			break;
+		} while (election <= 2);
+
+	}
+
+ do {
+	cout << "Hillary got " << d << " votes." << endl << "Trump got " << r << " votes." << endl;
+	break;
+	} while (election > 21);
+
+    return 0;
+}
