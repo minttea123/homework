@@ -1,0 +1,74 @@
+#include "stdafx.h"
+
+#include <iostream>
+
+using namespace std;
+
+
+int calcualte();
+
+float pen, pencil, pencilPack, penPack, money ;
+
+int x;
+char answer;
+
+
+
+
+int main()
+
+{
+	pen = 1.95;
+
+	pencil = .50;
+
+	pencilPack = 1.99;
+
+	
+	
+	do {
+		cout << "1: Pen \n2: Pencil \n3: Pencil Pack \n";
+
+		cin >> x;
+		
+		switch (x) {
+
+		case 1: 
+			 pen = (pen * 0.08) + pen;
+			 cout << "Amount Tendered:\n";
+			cin >> money;
+			
+			 money = money - pen; 
+			cout <<"Change: " <<  money << endl;
+			break;
+
+		case 2: 
+			 pencil = (pencil * 0.08) + pencil;
+			
+			 cout << "Amount Tendered:\n";
+			 cin >> money;
+			 cout << "Change: " << money << endl;
+			
+			 money = money - pencil;
+			 cout << "Change: " << money << endl;
+			break;
+
+		case 3: 
+			 pencilPack = (pencilPack * 0.08) + pencilPack;
+			 cout << "Amount Tendered:\n";
+			 cin >> money;
+			
+			 money = money - pencilPack;
+			 cout << "Change: " << money << endl;
+			break;
+	
+		}
+		
+		cout << "Would you like to buy another item?" << endl << "y/n" << endl;
+		cin >> answer;
+	} while (answer == 'y');
+	
+		return 0;
+		
+
+}
