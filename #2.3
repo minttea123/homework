@@ -1,0 +1,171 @@
+// ConsoleApplication19.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+
+
+
+#include <iostream>
+#include <functional>   // std::modulus, std::bind2nd
+#include <algorithm>    // std::transform
+
+
+using namespace std;
+
+
+
+
+
+int change();
+
+
+
+float pen, pencil, pencilPack, penPack, money, cashRegister;
+int penny, nickels, dimes, quarters, dollar, fives, tens, twenties, hundreds, cashRegister2;
+
+
+
+int x;
+
+char answer;
+
+
+float main()
+
+
+
+{
+
+	pen = 1.95;
+
+
+
+	pencil = .50;
+
+
+
+	pencilPack = 1.99;
+
+
+	cashRegister = 100.00;
+
+
+	do {
+
+		cout << "1: Pen \n2: Pencil \n3: Pencil Pack \n";
+
+
+
+		cin >> x;
+
+
+
+		switch (x) {
+
+
+
+		case 1:
+
+			pen = (pen * 0.08) + pen;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+
+
+			money = money - pen;
+
+			cout << "Change: " << money << endl;
+
+			cashRegister = cashRegister - money;
+
+			break;
+
+
+
+		case 2:
+
+			pencil = (pencil * 0.08) + pencil;
+
+
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+			cashRegister = cashRegister - money;
+			cout << "Change: " << money << endl;
+
+
+
+			money = money - pencil;
+
+			cout << "Change: " << money << endl;
+
+			cashRegister = cashRegister - money;
+			cout << "You have " << cashRegister << " in your register." << endl;
+
+			break;
+
+
+
+		case 3:
+
+			pencilPack = (pencilPack * 0.08) + pencilPack;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+
+
+			money = money - pencilPack;
+
+			cout << "Change: " << money << endl;
+			cout << "You have " << cashRegister << " in your register." << endl;
+
+			break;
+
+
+
+		}
+
+
+
+		cout << "Would you like to buy another item?" << endl << "y/n" << endl;
+
+		cin >> answer;
+
+	} while (answer == 'y');
+
+
+
+	return 0;
+
+
+
+
+
+}
+
+
+
+//template <class change> struct modulus : binary_function <change, change, change> {
+//T operator() (const T& cashRegister, const T& twenties) const { return cashRegister%twenties; }
+//};
+
+
+
+
+
+
+int change()
+{
+for (twenties = 20; twenties < cashRegister; twenties + 20)
+{
+
+	cashRegister == cashRegister2;
+tens = cashRegister2 % twenties;
+cout << "Twenties: " << twenties << endl;
+}
+return 0;
+}
