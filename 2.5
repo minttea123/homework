@@ -1,0 +1,175 @@
+// ConsoleApplication19.cpp : Defines the entry point for the console application.
+
+//
+
+#include "stdafx.h"
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+#include <cmath>
+#include <iostream>
+#include <functional>   // std::modulus, std::bind2nd
+#include <algorithm>    // std::transform
+using namespace std;
+
+
+//int change();
+
+// Declaring variables 
+//int pen, pencil, pencilPack, penPack, money, cashRegister;
+
+
+float an;
+int total;
+
+
+
+int main() {
+	char answer;
+	int x;
+	float pen = 5.00;
+	int pencil = 10.00;
+	int penPack = 20.00;
+	float money;
+	int total = 100;
+	int a;
+
+
+		cout << "1: Pen \n2: Pencil \n3: Pencil Pack \n";
+		cin >> x;
+
+		switch (x) {
+
+		case 1:
+
+
+			pen = (pen * 0.08 + 0.05) + pen;
+			
+		
+			cout << "total: " <<  pen << endl;
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			
+
+			money = money - pen;
+
+			
+			cout << "Change: " << money << endl;
+
+			total = total - money;
+			
+			cout << "Total left in cash register: " << total << endl; 
+			
+			total = total*100;
+			a = total;
+			
+			//bills
+			if (a >= 1000) cout << "Tens: " << a / 1000 << endl;
+			a %= 1000;
+			if (a >= 500) cout << "Fives: " << a / 500 << endl;
+			a %= 500;
+			if (a >= 100) cout << "Dollars: " << a / 100 << endl;
+			a % 100;
+			//coins
+			if (a >= 25) cout << "Quarters: " << a / 25 << endl;
+			a %= 25;
+			if (a >= 10) cout << "Dimes: " << a / 10 << endl;
+			a %= 10;
+			if (a >= 5) cout << "Nickles: " << a / 5 << endl;
+			a %= 5;
+			if (a >= 1) cout << "Pennies: " << a / 1 << endl;
+			//int cashRegister();
+			break;
+
+		case 2:
+
+			pencil = (pencil * 0.08 + 0.05) + pencil;
+
+
+			cout << "Total :" << pencil << endl;
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+
+
+			money = money - pencil;
+
+
+			cout << "Change: " << money << endl;
+
+			total = total - money;
+			cout << "Total left in cash register: " << total << endl;
+
+			a = total;
+			a = a * 100;
+			//bills
+			if (a >= 1000) cout << "Tens: " << a / 1000 << endl;
+			a %= 1000;
+			if (a >= 500) cout << "Fives: " << a / 500 << endl;
+			a %= 500;
+			if (a >= 100) cout << "Dollars: " << a / 100 << endl;
+			a % 100;
+			//coins
+			if (a >= 25) cout << "Quarters: " << a / 25 << endl;
+			a %= 25;
+			if (a >= 10) cout << "Dimes: " << a / 10 << endl;
+			a %= 10;
+			if (a >= 5) cout << "Nickles: " << a / 5 << endl;
+			a %= 5;
+			if (a >= 1) cout << "Pennies: " << a / 1 << endl;
+			//int cashRegister();
+			break;
+
+		case 3:
+
+			penPack = (pen * 0.08 + 0.05) + penPack;
+
+
+			cout << "Total: " << penPack << endl;
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+
+
+			money = money - penPack;
+
+
+			cout << "Change: " << money << endl;
+
+			total = total - money;
+			cout << "Total left in cash register: " << total << endl;
+
+			a = total;
+			a = a * 100;
+
+			//bills
+			if (a >= 1000) cout << "Tens: " << a / 1000 << endl;
+			a %= 1000;
+			if (a >= 500) cout << "Fives: " << a / 500 << endl;
+			a %= 500;
+			if (a >= 100) cout << "Dollars: " << a / 100 << endl;
+			a % 100;
+			
+			// coins
+			if (a >= 25) cout << "Quarters: " << a / 25 << endl;
+			a %= 25;
+			if (a >= 10) cout << "Dimes: " << a / 10 << endl;
+			a %= 10;
+			if (a >= 5) cout << "Nickles: " << a / 5 << endl;
+			a %= 5;
+			if (a >= 1) cout << "Pennies: " << a / 1 << endl;
+			//int cashRegister();
+			break;
+
+		}
+
+
+	return 0;
+}
+
