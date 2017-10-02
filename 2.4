@@ -1,0 +1,256 @@
+// ConsoleApplication19.cpp : Defines the entry point for the console application.
+
+//
+
+#include "stdafx.h"
+
+
+#include <stdio.h> 
+
+#include <math.h> 
+
+
+#include <iostream>
+
+#include <functional>   // std::modulus, std::bind2nd
+
+#include <algorithm>    // std::transform
+
+
+
+
+
+using namespace std;
+
+
+//int change();
+
+// Declaring variables 
+//int pen, pencil, pencilPack, penPack, money, cashRegister;
+
+
+float an;
+int total;
+
+
+
+int main() {
+	char answer;
+	int x;
+	int pen = 195;
+	int pencil = 50;
+	int pencilPack = 199;
+	 float money;
+	
+
+	do {
+		cout << "1: Pen \n2: Pencil \n3: Pencil Pack \n";
+		cin >> x;
+
+		switch (x) {
+		
+		case 1:
+
+
+			pen = (pen *8) + pen;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			money = money * 100;
+
+			money = money - pen;
+
+			cout << "Change: " << money/100 << endl;
+
+			total = total - money;
+			int cashRegister();
+			break;
+
+		case 2:
+
+
+			pencil = (pencil * 0.08) + pencil;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			money = money - pencil;
+
+			cout << "Change: " << money << endl;
+
+			total = total - money;
+			int cashRegister();
+			break;
+
+		case 3:
+
+			pen = (pen * 0.08) + pen;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			money = money - pen;
+
+			cout << "Change: " << money << endl;
+
+			total = total - money;
+			
+
+			int cashRegister();
+			break;
+
+		}
+
+
+
+
+
+	} while (answer = 'y');
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+int cashRegister(){
+	
+	//cin >> an;
+
+	int a = total;
+
+
+		if (a >= 25) cout << "Quarters: " << a/25 << endl;
+		a %= 25;
+		if (a >= 10) cout << "Dimes: " << a/10 << endl;
+		a %= 10;
+		if (a >= 5) cout << "Nickles: " << a/5 << endl;
+		a %= 5;
+		if (a >= 1) cout << "Pennies: " << a/1 << endl;
+	
+
+
+	
+
+return 0;
+}
+
+
+
+
+
+
+
+/*int main()
+
+{
+
+
+
+	pen = 195;
+	pencil = 50;
+	pencilPack = 199;
+	cashRegister = 10000;
+
+
+
+
+
+	do {
+
+
+
+		cout << "1: Pen \n2: Pencil \n3: Pencil Pack \n";
+
+		cin >> x;
+
+		switch (x) {
+
+
+		case 1:
+
+			
+			pen = (pen * 0.08) + pen;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			money = money - pen;
+
+			cout << "Change: " << money << endl;
+
+			cashRegister = cashRegister - money;
+
+			change();
+
+			break;
+
+		case 2:
+
+
+
+			pencil = (pencil * 0.08) + pencil;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			cashRegister = cashRegister - money;
+
+			cout << "Change: " << money << endl;
+
+			money = money - pencil;
+
+			cout << "Change: " << money << endl;
+
+			cashRegister = cashRegister - money;
+
+			cout << "You have " << cashRegister << " in your register." << endl;
+
+			change();
+
+			break;
+
+		case 3:
+
+			pencilPack = (pencilPack * 0.08) + pencilPack;
+
+			cout << "Amount Tendered:\n";
+
+			cin >> money;
+
+			money = money - pencilPack;
+
+
+
+			cout << "Change: " << money << endl;
+
+			cout << "You have " << cashRegister << " in your register." << endl;
+
+			change();
+
+			break;
+
+		}
+
+
+		cout << "Would you like to buy another item?" << endl << "y/n" << endl;
+
+		cin >> answer;
+	} while (answer == 'y');
+
+	return 0;
+
+}*/
+
