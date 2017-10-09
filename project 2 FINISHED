@@ -1,0 +1,49 @@
+// ConsoleApplication24.cpp : Defines the entry point for the console application.
+//Mike we're only supposed to do the first part not the searching part of the project
+
+#include "stdafx.h"
+#include <string>
+#include <string.h>
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+	string tweet = "LOL";
+	string LOL;
+
+	/*string str = "This is a lonely phrase";
+	string str1 = "lonely";
+	string str2 = "happy";
+	str.replace(str.find(str1), str1.length(), str2);
+
+	cout << str;*/
+	
+	
+	cout << "enter the abbreviations from the tweet:" << endl;
+
+	cin >> tweet;
+
+	
+	
+	if (tweet == "LOL") cout << "LOL = laughing out loud" << endl;
+
+
+	else if (tweet == "BFN") cout << "Bye for now" << endl;
+
+	else if (tweet == "FTW") cout << "For the win" << endl;
+
+	else if (tweet == "IRL") cout << "In real life" << endl;
+
+	else if (tweet == "TBH") cout << "to be honest" << endl;
+
+	else if (tweet == "SMH") cout << "shake my head" << endl;
+
+	else if (tweet == "GTG") cout << "got to go" << endl;
+
+	else cout << "sorry dont know that one" << endl;
+		
+		return 0;
+}
