@@ -1,0 +1,100 @@
+// ConsoleAlication25.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+
+///// global declaration /////
+char answer, x, o;
+int i = 0; 
+char a = 'A';
+char b = 'B';
+char c = 'C';
+char LineA[3] = { '1', '2', '3' };
+char LineB[3] = { '4', '5', '6' };
+char LineC[3] = { '7', '8', '9' };
+char Win[3] = { 'x', 'x', 'x' };
+char WinB[3] = { 'o', 'o', 'o' };
+
+
+void table()
+{
+	cout << '\t' << LineA << endl;
+	cout << '\t' << LineB << endl;
+	cout << '\t' << LineC << endl;
+}
+
+void picker()
+{
+	if (x == LineA[0]) LineA[0] = 'x';
+	if (x == LineA[1]) LineA[1] = 'x';
+	if (x == LineA[2]) LineA[2] = 'x';
+	if (x == LineB[0]) LineB[0] = 'x';
+	if (x == LineB[1]) LineB[1] = 'x';
+	if (x == LineB[2]) LineB[2] = 'x';
+	if (x == LineC[0]) LineC[0] = 'x';
+	if (x == LineC[1]) LineC[1] = 'x';
+	if (x == LineC[2]) LineC[2] = 'x';
+}
+
+void pickerB()
+{
+	if (o == LineA[0]) LineA[0] = 'o';
+	if (o == LineA[1]) LineA[1] = 'o';
+	if (o == LineA[2]) LineA[2] = 'o';
+	if (o == LineB[0]) LineB[0] = 'o';
+	if (o == LineB[1]) LineB[1] = 'o';
+	if (o == LineB[2]) LineB[2] = 'o';
+	if (o == LineC[0]) LineC[0] = 'o';
+	if (o == LineC[1]) LineC[1] = 'o';
+	if (o == LineC[2]) LineC[2] = 'o';
+}
+
+int main()
+{
+	//saw refrence
+	cout << "Would you like to play a game? \ny/n" << endl;
+	cin >> answer;
+
+	/// main loop
+	do {
+		cout << "ITS TIC TACK TOE" << endl;
+		//cout << '\t' << Label << endl;
+		table();
+
+		cout << "Which would you like to change? Enter number of space, ex 1" << endl;
+
+		do {
+			if ((LineA[3] == Win[3]) || (LineB[3] == Win[3]) || (LineC[3] == Win[3]) || (LineA[3] == WinB[3]) || (LineB[3] == WinB[3]) || (LineC[3] == WinB[3])) break;
+			cin >> x;
+
+			picker();
+
+			table();
+
+			//if ((LineA[3] == Win[3]) || (LineB[3] == Win) || (LineC == Win) || (LineA == WinB) || (LineB == WinB) || (LineC == WinB))  break; 
+
+			cin >> o;
+
+			pickerB();
+
+			table();
+
+		
+		} while (i = 0);
+
+
+		//while ((LineA[3] != Win[3]) && (LineB[3] != Win[3]) && (LineC[3] != Win[3]) && (LineA[3] != WinB[3]) && (LineB[3] != WinB[3]) && (LineC[3] != WinB[3]));
+
+
+
+
+
+		cout << "play again? y/n";
+		cin >> answer;
+
+	} while (answer == 'y');
+	return 0;
+}
